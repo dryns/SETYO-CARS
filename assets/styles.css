@@ -1,0 +1,248 @@
+/* ==== FONT & GLOBAL ==== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==== TYPOGRAPHY ==== */
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* ==== HERO SECTION FLEXIBLE ==== */
+.hero {
+  --hero-bg: url('assets/showroom.png');
+  --hero-overlay-color: rgba(128, 128, 128, 0.35);
+  --hero-height: 90vh;
+
+  height: var(--hero-height);
+  background: var(--hero-bg) center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--hero-overlay-color);
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+}
+
+/* ==== HERO VARIANTS ==== */
+.hero.large {
+  --hero-height: 100vh;
+}
+
+.hero.small {
+  --hero-height: 60vh;
+}
+
+.hero.bg-light {
+  --hero-overlay-color: rgba(255, 255, 255, 0.35);
+  color: #000;
+  text-shadow: none;
+}
+
+.hero.bg-dark {
+  --hero-overlay-color: rgba(0, 0, 0, 0.6);
+}
+
+/* ==== CARD PRODUK ==== */
+.card {
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.card-img-top {
+  height: 240px; /* Diperbesar dari 180px */
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.25rem; /* Diperbesar */
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.card-text {
+  font-size: 1.05rem; /* Diperbesar */
+  margin-bottom: 1rem;
+}
+
+/* ==== DETAIL PRODUK ==== */
+#detail-produk img {
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  width: 100%;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+#detail-nama {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+#detail-harga {
+  color: #dc3545;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+#detail-deskripsi {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+#tambah-ke-keranjang {
+  font-size: 1.1rem;
+  padding: 12px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+/* ==== FORM KONTAK ==== */
+form .form-control {
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+form button {
+  border-radius: 8px;
+}
+
+/* ==== MAP ==== */
+.ratio iframe {
+  border-radius: 12px;
+  width: 100%;
+}
+
+/* ==== FOOTER ==== */
+footer {
+  font-size: 0.9rem;
+  background-color: #000;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ==== NOTIFIKASI KERANJANG ==== */
+#cart-count {
+  font-size: 0.75rem;
+  padding: 4px 7px;
+  background-color: #dc3545;
+  border-radius: 50%;
+  color: #fff;
+  min-width: 20px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* ==== TOMBOL BAYAR ==== */
+#btn-bayar {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+#btn-bayar:hover {
+  background-color: #218838;
+}
+
+/* ==== KERANJANG PRODUK ==== */
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.qty-btn {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  background-color: #fff;
+  cursor: pointer;
+  user-select: none;
+}
+
+.qty-btn:hover {
+  background-color: #e2e6ea;
+}
+
+.card.mb-3 {
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  .card-img-top {
+    height: 160px;
+  }
+
+  #detail-produk img {
+    max-height: 300px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}

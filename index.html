@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SETYO CARS - Jual beli mobil baru dan bekas terpercaya di Indonesia. Temukan mobil impian Anda di sini.">
+  <meta name="author" content="Andriyan Susetyo">
+  <title>SETYO CARS - Jual Beli Mobil</title>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="assets/logo.jpg" alt="Logo Setyo Cars" class="me-2" style="height: 40px;">
+          <strong>SETYO CARS</strong>
+        </a>
+        <form class="d-flex mx-auto" id="search-form" role="search" aria-label="Form Pencarian">
+          <input class="form-control me-2" id="search-input" type="search" placeholder="Cari mobil..." aria-label="Cari mobil">
+          <button class="btn btn-outline-light me-2" type="submit" aria-label="Cari"><i class="bi bi-search"></i></button>
+          <button id="clear-search" class="btn btn-outline-danger" type="button" aria-label="Bersihkan pencarian"><i class="bi bi-x-lg"></i></button>
+        </form>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="produk.html">Produk</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kontak.html">Kontak</a>
+          </li>
+          <li class="nav-item position-relative">
+            <a class="nav-link" href="keranjang.html" aria-label="Lihat keranjang belanja">
+              <i class="bi bi-cart-fill"></i> Keranjang
+              <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display: none;">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero large text-center text-white position-relative" id="home" data-hero-image="assets/showroom.png">
+    <div class="hero-overlay"></div>
+    <div class="container position-relative z-2">
+      <h1 class="mb-3 animate__animated animate__fadeInDown">Pilih Mobil Impianmu Disini</h1>
+      <p class="lead animate__animated animate__fadeInUp">Temukan berbagai pilihan mobil baru dan bekas dengan harga terbaik hanya di SETYO CARS.</p>
+    </div>
+  </section>
+
+  <!-- Promo Carousel -->
+  <section class="promo-carousel bg-warning text-dark py-4 text-center">
+    <div class="container">
+      <div id="promoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <h4 class="mb-2 fw-bold">🔥 PROMO TERBATAS BULAN INI 🔥</h4>
+            <p class="mb-0">Diskon hingga <strong>25%</strong> untuk mobil pilihan! Dapatkan cashback & free service 1 tahun!</p>
+          </div>
+
+          <div class="carousel-item">
+            <h4 class="mb-2 fw-bold">🎉 BONUS AKHIR PEKAN 🎉</h4>
+            <p class="mb-0">Booking hari Sabtu-Minggu? Gratis kaca film & interior detailing!</p>
+          </div>
+
+          <div class="carousel-item">
+            <h4 class="mb-2 fw-bold">🚗 TRADE-IN MUDAH 🚗</h4>
+            <p class="mb-0">Tukar tambah mobil lama Anda dengan harga terbaik di SETYO CARS!</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Produk Section -->
+  <section id="produk" class="my-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Daftar Mobil</h2>
+      <div class="row g-4" id="product-list">
+        <!-- Produk akan dimuat di sini via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center mt-5 p-4 bg-black text-white">
+    <div class="container">
+      <p class="mb-1">&copy; 2025 <strong>SETYO CARS</strong></p>
+      <small>
+        Ikuti kami di:
+        <a href="https://www.instagram.com/_andryns" class="text-white text-decoration-underline" target="_blank" rel="noopener">Instagram</a> •
+        <a href="https://www.facebook.com/SETYO_CARS" class="text-white text-decoration-underline" target="_blank" rel="noopener">Facebook</a><br>
+        <span>Program by: ANDRIYAN SUSETYO</span>
+      </small>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="assets/script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Set background image dari atribut data-hero-image
+    document.addEventListener("DOMContentLoaded", function () {
+      const heroSection = document.querySelector('.hero');
+      const imagePath = heroSection.getAttribute('data-hero-image');
+      if (imagePath) {
+        heroSection.style.background = `linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('${imagePath}') center/cover no-repeat`;
+      }
+
+      // Pencarian langsung scroll ke produk
+      const searchForm = document.getElementById('search-form');
+      const searchInput = document.getElementById('search-input');
+      const clearBtn = document.getElementById('clear-search');
+
+      searchForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const keyword = searchInput.value.trim();
+        if (keyword) {
+          document.getElementById('produk').scrollIntoView({ behavior: 'smooth' });
+          filterProduk(keyword);
+        }
+      });
+
+      clearBtn.addEventListener('click', function () {
+        searchInput.value = '';
+        filterProduk('');
+      });
+
+      function filterProduk(keyword) {
+        const cards = document.querySelectorAll('#product-list .col');
+        cards.forEach(card => {
+          const text = card.textContent.toLowerCase();
+          card.style.display = text.includes(keyword.toLowerCase()) ? '' : 'none';
+        });
+      }
+    });
+  </script>
+</body>
+</html>

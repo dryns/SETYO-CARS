@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontak Kami - SETYO CARS</title>
+  <meta name="description" content="Hubungi tim SETYO CARS untuk pertanyaan atau bantuan seputar jual beli mobil.">
+
+  <!-- Styles & Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="assets/logo.jpg" alt="Logo SETYO CARS - Jual Beli Mobil" class="me-2" style="height: 40px;">
+      <strong>SETYO CARS</strong>
+    </a>
+    <form class="d-flex mx-auto" id="search-form">
+      <input class="form-control me-2" id="search-input" type="search" placeholder="Cari mobil..." aria-label="Search">
+      <button class="btn btn-outline-light me-2" type="submit"><i class="bi bi-search"></i></button>
+      <button id="clear-search" class="btn btn-outline-danger" type="button"><i class="bi bi-x-lg"></i></button>
+    </form>
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+      <li class="nav-item"><a class="nav-link active" href="kontak.html">Kontak</a></li>
+      <li class="nav-item position-relative">
+        <a class="nav-link" href="keranjang.html">
+          <i class="bi bi-cart-fill"></i> Keranjang
+          <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Kontak Section -->
+<main>
+  <section class="container my-5">
+    <h2 class="text-center mb-5">Hubungi Kami</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <form>
+          <div class="mb-3">
+            <label for="nama" class="form-label">Nama Lengkap</label>
+            <input type="text" class="form-control" id="nama" placeholder="Masukkan nama Anda" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Alamat Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Masukkan email Anda" required>
+          </div>
+          <div class="mb-3">
+            <label for="pesan" class="form-label">Pesan</label>
+            <textarea class="form-control" id="pesan" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <i class="bi bi-send-fill"></i> Kirim Pesan
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Maps -->
+  <section class="container mb-5">
+    <h3 class="text-center mb-3">Lokasi Kami</h3>
+    <div class="ratio ratio-16x9 shadow rounded">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31636.829281833055!2d110.3537863431355!3d-7.801432936168322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a598c3c9f4f0d%3A0x5027a76e356c880!2sYogyakarta!5e0!3m2!1sid!2sid!4v1628424679223!5m2!1sid!2sid" 
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="text-center mt-5 p-3 bg-black text-white">
+  <div class="container">
+    <p>&copy; 2025 <strong>SETYO CARS</strong></p>
+    <small>Ikuti kami di :
+      <a href="https://www.instagram.com/_andryns" class="text-white">Instagram</a> •
+      <a href="https://www.facebook.com/SETYO_CARS" class="text-white">Facebook</a><br>
+      <span>Program by : ANDRIYAN SUSETYO</span>
+    </small>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
