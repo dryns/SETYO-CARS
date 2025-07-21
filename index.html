@@ -13,9 +13,82 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/styles.css" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <style>
+    .hero-container {
+      margin-top: 30px;
+      padding: 60px 20px;
+      min-height: 450px;
+      background: url('assets/showroom.png') center/cover no-repeat;
+      border-radius: 16px;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-container::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 1;
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .promo-section {
+      padding: 40px 0;
+    }
+
+    .swiper {
+      padding-bottom: 40px;
+    }
+
+    .swiper-slide {
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .promo-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .promo-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-top: 15px;
+    }
+
+    .promo-desc {
+      font-size: 0.95rem;
+      color: #555;
+      margin: 10px 20px 15px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: #000;
+    }
+  </style>
 </head>
 <body>
 
@@ -27,20 +100,16 @@
           <img src="assets/logo.jpg" alt="Logo Setyo Cars" class="me-2" style="height: 40px;">
           <strong>SETYO CARS</strong>
         </a>
-        <form class="d-flex mx-auto" id="search-form" role="search" aria-label="Form Pencarian">
-          <input class="form-control me-2" id="search-input" type="search" placeholder="Cari mobil..." aria-label="Cari mobil">
-          <button class="btn btn-outline-light me-2" type="submit" aria-label="Cari"><i class="bi bi-search"></i></button>
-          <button id="clear-search" class="btn btn-outline-danger" type="button" aria-label="Bersihkan pencarian"><i class="bi bi-x-lg"></i></button>
+        <form class="d-flex mx-auto" id="search-form">
+          <input class="form-control me-2" id="search-input" type="search" placeholder="Cari mobil..." />
+          <button class="btn btn-outline-light me-2" type="submit"><i class="bi bi-search"></i></button>
+          <button id="clear-search" class="btn btn-outline-danger" type="button"><i class="bi bi-x-lg"></i></button>
         </form>
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="produk.html">Produk</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="kontak.html">Kontak</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
           <li class="nav-item position-relative">
-            <a class="nav-link" href="keranjang.html" aria-label="Lihat keranjang belanja">
+            <a class="nav-link" href="keranjang.html">
               <i class="bi bi-cart-fill"></i> Keranjang
               <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display: none;">0</span>
             </a>
@@ -50,38 +119,65 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero large text-center text-white position-relative" id="home" data-hero-image="assets/showroom.png">
-    <div class="hero-overlay"></div>
-    <div class="container position-relative z-2">
-      <h1 class="mb-3 animate__animated animate__fadeInDown">Pilih Mobil Impianmu Disini</h1>
-      <p class="lead animate__animated animate__fadeInUp">Temukan berbagai pilihan mobil baru dan bekas dengan harga terbaik hanya di SETYO CARS.</p>
+  <!-- Hero -->
+  <div class="container">
+    <div class="hero-container">
+      <div class="hero-text">
+        <h1 class="animate__animated animate__fadeInDown">Pilih Mobil Impianmu Disini</h1>
+      </div>
     </div>
-  </section>
+  </div>
 
-  <!-- Promo Carousel -->
-  <section class="promo-carousel bg-warning text-dark py-4 text-center">
+  <!-- Promo Slider -->
+  <section class="promo-section">
     <div class="container">
-      <div id="promoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
-        <div class="carousel-inner">
+      <h2 class="text-center mb-4">🔥 Promo Terbaru 🔥</h2>
 
-          <div class="carousel-item active">
-            <h4 class="mb-2 fw-bold">🔥 PROMO TERBATAS BULAN INI 🔥</h4>
-            <p class="mb-0">Diskon hingga <strong>25%</strong> untuk mobil pilihan! Dapatkan cashback & free service 1 tahun!</p>
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+          <!-- Promo 1 -->
+          <div class="swiper-slide">
+            <img src="assets/iklan4.jpg" class="promo-image" alt="Promo 1">
+            <div class="promo-title">Gratis Servis 1 Tahun</div>
+            <div class="promo-desc">Beli mobil sekarang dan nikmati servis berkala gratis hingga 12 bulan.</div>
           </div>
 
-          <div class="carousel-item">
-            <h4 class="mb-2 fw-bold">🎉 BONUS AKHIR PEKAN 🎉</h4>
-            <p class="mb-0">Booking hari Sabtu-Minggu? Gratis kaca film & interior detailing!</p>
+          <!-- Promo 2 -->
+          <div class="swiper-slide">
+            <img src="assets/iklan5.jpg" class="promo-image" alt="Promo 2">
+            <div class="promo-title">Diskon DP hingga 30%</div>
+            <div class="promo-desc">Promo spesial untuk pembelian kredit. Dapatkan potongan besar hari ini!</div>
           </div>
 
-          <div class="carousel-item">
-            <h4 class="mb-2 fw-bold">🚗 TRADE-IN MUDAH 🚗</h4>
-            <p class="mb-0">Tukar tambah mobil lama Anda dengan harga terbaik di SETYO CARS!</p>
+          <!-- Promo 3 -->
+          <div class="swiper-slide">
+            <img src="assets/iklan2.jpeg" class="promo-image" alt="Promo 3">
+            <div class="promo-title">Hadiah Langsung</div>
+            <div class="promo-desc">Setiap pembelian mobil baru berhadiah langsung tanpa diundi!</div>
+          </div>
+
+          <!-- Promo 4 -->
+          <div class="swiper-slide">
+            <img src="assets/iklan.jpg" class="promo-image" alt="Promo 4">
+            <div class="promo-title">Cicilan 0% 12 Bulan</div>
+            <div class="promo-desc">Dapatkan cicilan ringan tanpa bunga untuk mobil pilihan!</div>
+          </div>
+
+          <!-- Promo 5 -->
+          <div class="swiper-slide">
+            <img src="assets/iklan3.jpg" class="promo-image" alt="Promo 5">
+            <div class="promo-title">Trade-in Tambah Untung</div>
+            <div class="promo-desc">Tukar tambah mobil lamamu dan dapatkan bonus ekstra hingga 10 juta!</div>
           </div>
 
         </div>
+        <!-- Panah Navigasi -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
+
     </div>
   </section>
 
@@ -90,7 +186,7 @@
     <div class="container">
       <h2 class="text-center mb-5">Daftar Mobil</h2>
       <div class="row g-4" id="product-list">
-        <!-- Produk akan dimuat di sini via JavaScript -->
+        <!-- Produk dimuat oleh script.js -->
       </div>
     </div>
   </section>
@@ -101,8 +197,8 @@
       <p class="mb-1">&copy; 2025 <strong>SETYO CARS</strong></p>
       <small>
         Ikuti kami di:
-        <a href="https://www.instagram.com/_andryns" class="text-white text-decoration-underline" target="_blank" rel="noopener">Instagram</a> •
-        <a href="https://www.facebook.com/SETYO_CARS" class="text-white text-decoration-underline" target="_blank" rel="noopener">Facebook</a><br>
+        <a href="https://www.instagram.com/_andryns" class="text-white text-decoration-underline" target="_blank">Instagram</a> •
+        <a href="https://www.facebook.com/SETYO_CARS" class="text-white text-decoration-underline" target="_blank">Facebook</a><br>
         <span>Program by: ANDRIYAN SUSETYO</span>
       </small>
     </div>
@@ -110,41 +206,29 @@
 
   <!-- Script -->
   <script src="assets/script.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script>
-    // Set background image dari atribut data-hero-image
-    document.addEventListener("DOMContentLoaded", function () {
-      const heroSection = document.querySelector('.hero');
-      const imagePath = heroSection.getAttribute('data-hero-image');
-      if (imagePath) {
-        heroSection.style.background = `linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('${imagePath}') center/cover no-repeat`;
-      }
-
-      // Pencarian langsung scroll ke produk
-      const searchForm = document.getElementById('search-form');
-      const searchInput = document.getElementById('search-input');
-      const clearBtn = document.getElementById('clear-search');
-
-      searchForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-        const keyword = searchInput.value.trim();
-        if (keyword) {
-          document.getElementById('produk').scrollIntoView({ behavior: 'smooth' });
-          filterProduk(keyword);
+    const swiper = new Swiper('.mySwiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2
+        },
+        992: {
+          slidesPerView: 3
         }
-      });
-
-      clearBtn.addEventListener('click', function () {
-        searchInput.value = '';
-        filterProduk('');
-      });
-
-      function filterProduk(keyword) {
-        const cards = document.querySelectorAll('#product-list .col');
-        cards.forEach(card => {
-          const text = card.textContent.toLowerCase();
-          card.style.display = text.includes(keyword.toLowerCase()) ? '' : 'none';
-        });
       }
     });
   </script>
