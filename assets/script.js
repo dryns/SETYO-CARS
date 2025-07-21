@@ -2,25 +2,67 @@
 const produkMobil = [
   {
     id: 1,
-    nama: "Toyota Inova",
+    nama: "Toyota Inova Reborn",
     gambar: "assets/inova.jpg",
     harga: 700000000,
-    deskripsi: "Toyota Innova adalah MPV keluarga yang dikenal luas di Indonesia karena kabinnya yang lapang, performa mesin yang handal, dan desain yang elegan. Mobil ini cocok untuk keluarga besar yang mengutamakan kenyamanan dan keamanan dalam berkendara. ."
+    deskripsi: "Toyota Kijang Innova adalah pilihan MPV yang populer di Indonesia, dikenal karena kabinnya yang luas dan nyaman, cocok untuk keluarga besar. Mobil ini menawarkan berbagai pilihan mesin bensin dan diesel, serta transmisi manual dan otomatis, memberikan fleksibilitas bagi konsumen. Innova juga dilengkapi dengan fitur keselamatan modern dan desain eksterior yang premium, menjadikannya pilihan menarik di pasar MPV. "
   },
   {
     id: 2,
     nama: "Honda Civic Turbo",
     gambar: "assets/civic.jpg",
     harga: 750000000,
-    deskripsi: "Honda Civic Turbo adalah sedan sporty yang dikenal dengan performa mesin bertenaga, desain aerodinamis, dan fitur-fitur canggih. Mesin 1.5L VTEC Turbo menghasilkan tenaga yang responsif dan efisiensi bahan bakar yang baik. Desainnya yang stylish dan sporty, serta fitur-fitur modern di interior, menjadikannya pilihan menarik bagi mereka yang mencari sedan dengan keseimbangan antara performa dan gaya. ."
+    deskripsi: "Honda Civic Turbo adalah sedan sporty yang memadukan performa tinggi dengan desain modern dan fitur-fitur canggih. Mesin 1.5L VTEC Turbo memberikan tenaga responsif, sementara eksteriornya yang aerodinamis dan interior yang mewah menawarkan pengalaman berkendara yang menyenangkan. Fitur-fitur keselamatan dan hiburan terkini juga melengkapi mobil ini, menjadikannya pilihan menarik bagi mereka yang mencari sedan modern dan berkelas. "
   },
   {
     id: 3,
+    nama: "Toyota Kijang Kapsul",
+    gambar: "assets/kijang-kapsul.jpg",
+    harga: 80000000,
+    deskripsi: "Toyota Kijang Kapsul adalah pilihan mobil keluarga yang populer di Indonesia, dikenal karena kabinnya yang luas, mesin yang andal, dan kemampuannya untuk menaklukkan berbagai medan jalan. Model ini menawarkan perpaduan antara kenyamanan, daya tahan, dan fungsionalitas, menjadikannya favorit di kalangan keluarga Indonesia. "
+  },
+  {
+    id: 4,
+    nama: "Mazda 3",
+    gambar: "assets/mazda3.jpg",
+    harga: 650000000,
+    deskripsi: "Mazda3 adalah pilihan menarik di segmen mobil kompak dengan desain yang elegan dan performa yang dinamis. Tersedia dalam dua pilihan model, yaitu hatchback dan sedan, Mazda3 menawarkan pengalaman berkendara yang menyenangkan. Desainnya yang khas, yang disebut Single Motion, menonjolkan siluet yang dramatis dan ekspresif, terutama pada model hatchback yang terinspirasi dari konsep Mazda Kai. Selain tampilan yang menarik, Mazda3 juga menawarkan fitur-fitur canggih seperti mesin Skyactiv-G 2.0 liter, transmisi otomatis 6-percepatan, dan sistem G-Vectoring Control Plus (GVC Plus) yang meningkatkan pengendalian dan stabilitas. "
+  },
+  {
+    id: 5,
+    nama: "Toyota Fortuner",
+    gambar: "assets/fortuner.jpg",
+    harga: 780000000,
+    deskripsi: "Toyota Fortuner adalah SUV tangguh yang menawarkan perpaduan desain gagah, interior luas, performa andal, dan fitur keselamatan canggih. Cocok untuk keluarga yang mencari kendaraan tangguh untuk berbagai kondisi jalan, baik perkotaan maupun medan berat. "
+  },
+  {
+    id: 6,
     nama: "Toyota Land Cruiser",
     gambar: "assets/land-cruiser.jpg",
     harga: 1000000000,
-    deskripsi: "Toyota Land Cruiser adalah SUV tangguh dan mewah yang dirancang untuk performa tinggi di segala medan. Mobil ini dikenal karena keandalan, daya tahan, dan kemampuannya melibas medan off-road. Land Cruiser juga menawarkan kabin yang luas dan nyaman dengan fitur-fitur canggih, menjadikannya pilihan ideal untuk petualangan maupun penggunaan sehari-hari. ."
+    deskripsi: "Toyota Land Cruiser adalah SUV tangguh dan mewah yang dirancang untuk petualangan di segala medan. Mobil ini dikenal karena performa off-road yang unggul, interior yang luas dan nyaman, serta fitur keselamatan yang canggih. "
   },
+  {
+    id: 7,
+    nama: "Toyota Avanza",
+    gambar: "assets/avanza.jpg",
+    harga: 100000000,
+    deskripsi: "Toyota Avanza adalah mobil keluarga (LMPV) yang populer di Indonesia, sering disebut sebagai mobil sejuta umat karena kepraktisan, harga terjangkau, dan ketersediaan suku cadang yang mudah. Untuk keperluan pemasaran, Avanza bisa dideskripsikan sebagai kendaraan yang ideal untuk keluarga Indonesia, menawarkan ruang yang luas, efisiensi bahan bakar, dan biaya perawatan yang terjangkau. "
+  },
+  {
+    id: 8,
+    nama: "Toyota Rush",
+    gambar: "assets/rush.jpg",
+    harga: 150000000,
+    deskripsi: "Toyota Rush adalah SUV keluarga yang tangguh dengan desain sporty dan modern. Mobil ini menawarkan kabin yang luas dengan 7 kursi penumpang, cocok untuk keluarga atau perjalanan bersama teman-teman. Rush juga dikenal dengan performa mesin yang bertenaga dan irit bahan bakar, serta fitur keselamatan yang lengkap. "
+  },
+  {
+    id: 9,
+    nama: "Toyota Yaris",
+    gambar: "assets/toyota-yaris.jpg",
+    harga: 50000000,
+    deskripsi: "Toyota Yaris adalah pilihan hatchback yang sporty dan stylish, cocok untuk anak muda dan mereka yang berjiwa muda. Desainnya yang modern, fitur-fitur canggih, dan performa yang lincah membuatnya menjadi hatchback yang menarik. "
+  }
 ];
 
 // ==== TAMPILKAN PRODUK DI HALAMAN PRODUK ====
